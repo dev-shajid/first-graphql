@@ -45,4 +45,4 @@ const transactionTypeDef = `#graphql
     }
 `
 
-module.exports = transactionTypeDef
+export default transactionTypeDef

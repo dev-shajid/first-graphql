@@ -1,8 +1,8 @@
-const {mergeResolvers} = require('@graphql-tools/merge')
+import { mergeResolvers } from '@graphql-tools/merge'
 
-const userResolver =require('./user.resolver')
-const transactionResolver =require('./transaction.resolver')
+import userResolver from './user.resolver.js'
+import transactionResolver from './transaction.resolver.js'
 
 const resolver = mergeResolvers([userResolver, transactionResolver])
 
-module.exports = resolver
+export default resolver

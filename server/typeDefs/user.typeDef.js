@@ -38,4 +38,4 @@ const userTypeDef = `#graphql
     }
 `
 
-module.exports = userTypeDef
+export default userTypeDef

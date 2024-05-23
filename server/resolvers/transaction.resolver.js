@@ -1,7 +1,7 @@
-const Transaction = require("../models/transaction.model.js")
-const User = require("../models/user.model.js")
+import Transaction from "../models/transaction.model.js"
+import User from "../models/user.model.js"
 
-module.exports = {
+export default {
     Query: {
         transactions: async (_, __, context) => {
             try {
@@ -50,7 +50,7 @@ module.exports = {
                 const newTransaction = new Transaction({
                     ...input,
                     userId: context.getUser()._id,
-                });f
+                }); f
                 await newTransaction.save();
                 return newTransaction;
             } catch (err) {

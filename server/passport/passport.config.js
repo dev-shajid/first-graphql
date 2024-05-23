@@ -1,10 +1,10 @@
-const passport = require('passport')
-const bcrypt = require('bcryptjs')
+import passport from 'passport'
+import bcrypt from 'bcryptjs'
 
-const User = require('../models/user.model')
-const { GraphQLLocalStrategy } = require('graphql-passport')
+import User from '../models/user.model.js'
+import { GraphQLLocalStrategy } from 'graphql-passport'
 
-module.exports = async () => {
+export default async () => {
     passport.serializeUser((user, done) => {
         done(null, user.id)
     })

@@ -1,8 +1,7 @@
-const {mergeTypeDefs} = require('@graphql-tools/merge')
+import { mergeTypeDefs } from '@graphql-tools/merge'
+import transactionTypeDef from './transaction.typeDef.js'
+import userTypeDef from './user.typeDef.js'
 
-const transactionTypeDef = require('./transaction.typeDef')
-const userTypeDef = require('./user.typeDef')
+const typeDefs = mergeTypeDefs([userTypeDef, transactionTypeDef])
 
-const typeDefs=mergeTypeDefs([userTypeDef, transactionTypeDef])
-
-module.exports=typeDefs
+export default typeDefs
